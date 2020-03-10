@@ -1,5 +1,10 @@
 # bash-snippets
 
+1. [shebang](#shebang)
+1. [Functions](#functions)
+1. [Parsing command line arguments](parsing-command-line-arguments)
+1. [Get the current script directory](get-the-current-script-directory)
+
 ## shebang
 
 ```bash
