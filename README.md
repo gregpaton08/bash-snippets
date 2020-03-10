@@ -6,6 +6,26 @@
 #!/usr/bin/env bash
 ```
 
+## Functions
+
+```bash
+# Define a function.
+function quit {
+   exit
+}
+
+# Call the function.
+quit
+
+# Define a function that takes a paramter.
+function printarg {
+    echo $1
+}
+
+# Call the function with an argument.
+printarg "Hello, world!"
+```
+
 ## Parsing command line arguments
 
 ```bash
