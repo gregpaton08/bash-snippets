@@ -2,8 +2,9 @@
 
 1. [shebang](#shebang)
 1. [Functions](#functions)
-1. [Parsing command line arguments](parsing-command-line-arguments)
-1. [Get the current script directory](get-the-current-script-directory)
+1. [Parsing command line arguments](#parsing-command-line-arguments)
+1. [Get the current script directory](#get-the-current-script-directory)
+1. [For Loop](#for-loop)
 
 ## shebang
 
@@ -64,4 +65,19 @@ done
 
 ```bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+```
+
+## For Loop
+
+```bash
+for i in {0..5}; do
+   echo $i
+done
+# Prints out:
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
 ```
