@@ -5,6 +5,7 @@
 1. [Parsing command line arguments](#parsing-command-line-arguments)
 1. [Get the current script directory](#get-the-current-script-directory)
 1. [For Loop](#for-loop)
+1. [Check how a script was called](#checking-if-script-was-called-directly)
 
 ## shebang
 
@@ -80,4 +81,29 @@ done
 # 3
 # 4
 # 5
+```
+
+## Checking if script was called directly
+
+Check if a scipt was called vs. source'd by another script. Analagous to `if __name__ == "__main__":` in Python.
+
+```bash
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    ...
+fi
+```
+
+The above `if` condition will hit if the script is called directly, i.e. `./my_script.sh` or `bash my_script.sh`. However, it will not be called if the script is source'd by another script, e.g.
+
+```bash
+# contents of some_other_script.sh
+
+source my_script.sh
+
+echo "doing other things..."
+```
+
+```bash
+./some_other_script.sh
+# the if condition will not hit
 ```
